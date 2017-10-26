@@ -4,4 +4,31 @@
   description: "Plex Media Server"
   uuid: plex-0
   minimum_rancher_version: v0.51.0
+  questions:
+    - variable: time_zone
+      description: "Enter your Timeszone"
+      label: "Time Zone"
+      required: true
+      default: "America/Vancouver"
+      type: "string"
+    - variable: volume_driver
+      description: "Volume driver to use with this service"
+      label: "Volume driver"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+    - variable: plex-tag
+      description: "Plex Version"
+      label: "Plex Docker Tag"
+      required: true
+      default: "local"
+      type: enum
+      options:
+        - latest
+        - plexpass
 Rancher-Plex:
