@@ -1,5 +1,7 @@
-version: '2'
-services:
-  plex:
-    scale: 1
-    start_on_create: true
+.catalog:
+  name: "Plex"
+  version: "v1.0"
+  description: "Plex Media Server"
+  uuid: plex-0
+  minimum_rancher_version: v0.51.0
+Rancher-Plex:
