@@ -1,5 +1,5 @@
 name: Plex-Media-Server
 description: |
   Rancher Plex Service built around the official Plex Docker container.
-version: 0.1
+version: 1.0
 category: Media
