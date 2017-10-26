@@ -1,0 +1,9 @@
+---
+name: Plex-Media-Server
+description: >
+  Rancher Plex Service built around the official Plex Docker container.
+version: 0.0.1
+category: Media
+maintainer: Chris Brompton <chris@cbphoto.ca>
+license: Plex
+projectURL: https://github.com/cbrompton/Rancher-Plex
