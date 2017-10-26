@@ -1,4 +1,3 @@
----
 name: Plex-Media-Server
 description: >
   Rancher Plex Service built around the official Plex Docker container.
