@@ -22,7 +22,7 @@
         - rancher-nfs
         - rancher-efs
         - rancher-ebs
-    - variable: plex-tag
+    - variable: plex_tag
       description: "Plex Version"
       label: "Plex Docker Tag"
       required: true

@@ -1,10 +1,10 @@
 version: '2'
 services:
   plex:
-    {{- if eq .Values.plex-tag "latest"}}
+    {{- if eq .Values.plex_tag "latest"}}
     image: plexinc/pms-docker:latest
     {{- end}}
-    {{- if eq .Values.plex-tag "plexpass"}}
+    {{- if eq .Values.plex_tag "plexpass"}}
     image: plexinc/pms-docker:plexpass
     {{- end}}
     image: plexinc/pms-docker: ${plex-tag}
