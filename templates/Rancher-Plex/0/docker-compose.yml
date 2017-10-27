@@ -1,7 +1,7 @@
 version: '2'
 services:
   plex:
-    image: plexinc/pms-docker
+    image: plexinc/pms-docker:${plex-tag}
     environment:
       TZ: America/Vancouver
       PLEX_CLAIM: claim-yEQ3DaE5gtxtpec8G5oN
