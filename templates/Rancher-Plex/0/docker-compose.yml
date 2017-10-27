@@ -1,25 +1,10 @@
 version: '2'
-volumes:
-  data:
-    driver_opts:
-      export: /mnt/plex
-      host: pi.cbphoto.ca
-    driver: rancher-nfs
-  transcode:
-    driver_opts:
-      exportBase: /mnt/plex/rancher/transcode
-      host: pi.cbphoto.ca
-    driver: rancher-nfs
-  config:
-    driver_opts:
-      exportBase: /mnt/plex/rancher/config
-      host: pi.cbphoto.ca
-    driver: rancher-nfs
 services:
   plex:
     image: plexinc/pms-docker
     environment:
-      TZ: ' "PST"'
+      TZ: America/Vancouver
+      PLEX_CLAIM: claim-yEQ3DaE5gtxtpec8G5oN
     volumes:
     - config:/config:nocopy
     - transcode:/transcode:nocopy
@@ -36,3 +21,30 @@ services:
     - 32414:32414/udp
     labels:
       io.rancher.container.pull_image: always
+      io.rancher.sidekicks: plex-data
+    volumes_from: 
+    - plex-data
+  plex-data:
+    image: plexinc/pms-docker
+    labels:
+      io.rancher.container.start_once: 'true'
+    volumes:
+    - config:/config:nocopy
+    - transcode:/transcode:nocopy
+    - data:/data:nocopy  
+volumes:
+  data:
+    driver_opts:
+      export: /mnt/plex
+      host: pi.cbphoto.ca
+    driver: rancher-nfs
+  transcode:
+    driver_opts:
+      exportBase: /mnt/plex/rancher/transcode
+      host: pi.cbphoto.ca
+    driver: rancher-nfs
+  config:
+    driver_opts:
+      exportBase: /mnt/plex/rancher/config
+      host: pi.cbphoto.ca
+    driver: rancher-nfs
