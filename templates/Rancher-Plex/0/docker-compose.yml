@@ -25,7 +25,7 @@ services:
     volumes_from: 
     - plex-data
   plex-data:
-    image: plexinc/pms-docker
+    image: plexinc/pms-docker:$plex_tag
     labels:
       io.rancher.container.start_once: 'true'
     volumes:
