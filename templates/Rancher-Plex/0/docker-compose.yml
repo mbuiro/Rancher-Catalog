@@ -3,8 +3,8 @@ services:
   plex:
     image: plexinc/pms-docker:$plex_tag
     environment:
-      TZ: America/Vancouver
-      PLEX_CLAIM: claim-yEQ3DaE5gtxtpec8G5oN
+      TZ: $time_zone
+      PLEX_CLAIM: $prize_claim
     volumes:
     - config:/config:nocopy
     - transcode:/transcode:nocopy

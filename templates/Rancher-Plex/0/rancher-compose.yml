@@ -31,5 +31,11 @@
       options:
         - latest
         - plexpass
+    - variable: prize_claim
+      description: "Visit http://plex.tv/claim to get a prize claim code, then enter it here."
+      label: "Prize Claim"
+      required: false
+      default: "CLAIM-xxxxxxxxxxxxxxxxxxx"
+      type: "string"
 plex:
 
