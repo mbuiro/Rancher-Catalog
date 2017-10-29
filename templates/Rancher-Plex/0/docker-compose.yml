@@ -46,6 +46,6 @@ volumes:
     driver: rancher-nfs
   config:
     driver_opts:
-      exportBase: /mnt/plex/rancher/config
+      export: /home/pi/rancherplex/config
       host: pi.cbphoto.ca
     driver: rancher-nfs
