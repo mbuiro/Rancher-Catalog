@@ -46,6 +46,6 @@ volumes:
     driver: rancher-nfs
   config:
     driver_opts:
-      export: /plex/config
+      export: /plex/rancher/config
       host: ws01.cbphoto.ca
     driver: rancher-nfs
