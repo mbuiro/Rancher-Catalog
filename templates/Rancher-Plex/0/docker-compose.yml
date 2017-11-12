@@ -36,16 +36,16 @@ services:
 volumes:
   data:
     driver_opts:
-      export: /mnt/plex
-      host: pi.cbphoto.ca
+      export: /plex
+      host: ws01.cbphoto.ca
     driver: rancher-nfs
   transcode:
     driver_opts:
-      exportBase: /mnt/plex/rancher/transcode
-      host: pi.cbphoto.ca
+      exportBase: /plex/rancher/transcode
+      host: ws01.cbphoto.ca
     driver: rancher-nfs
   config:
     driver_opts:
-      export: /home/pi/rancherplex/config
-      host: pi.cbphoto.ca
+      export: /plex/config
+      host: ws01.cbphoto.ca
     driver: rancher-nfs
