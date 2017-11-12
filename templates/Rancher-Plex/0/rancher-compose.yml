@@ -31,6 +31,8 @@
       options:
         - latest
         - plexpass
+        - public
+        - 1.9.4.4325-1bf240a65
     - variable: prize_claim
       description: "Visit http://plex.tv/claim to get a prize claim code, then enter it here."
       label: "Prize Claim"
