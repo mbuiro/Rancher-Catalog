@@ -6,10 +6,10 @@
   minimum_rancher_version: v0.51.0
   questions:
     - variable: time_zone
-      description: "Enter your Timeszone"
+      description: "Enter your Time zone"
       label: "Time Zone"
       required: true
-      default: "America/Vancouver"
+      default: "America/Chicago"
       type: "string"
     - variable: volume_driver
       description: "Volume driver to use with this service"
@@ -39,5 +39,4 @@
       required: false
       default: "CLAIM-xxxxxxxxxxxxxxxxxxx"
       type: "string"
-plex:
 
