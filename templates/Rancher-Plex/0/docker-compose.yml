@@ -6,9 +6,9 @@ services:
       TZ: $time_zone
       PLEX_CLAIM: $prize_claim
     volumes:
-    - config:/config:nocopy
-    - transcode:/transcode:nocopy
-    - data:/data:nocopy
+    - config:/config
+    - transcode:/transcode
+    - data:/data
     network_mode: host
     ports:
     - 32400:32400/tcp
@@ -30,9 +30,9 @@ services:
     labels:
       io.rancher.container.start_once: 'true'
     volumes:
-    - config:/config:nocopy
-    - transcode:/transcode:nocopy
-    - data:/data:nocopy  
+    - config:/config
+    - transcode:/transcode
+    - data:/data  
 volumes:
   data:
     driver_opts:
